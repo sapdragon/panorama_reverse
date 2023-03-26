@@ -127,9 +127,9 @@ class CUIEngine // or panorama::CUIEngineSource2. Its VTable
     virtual void Unknown91(); // 0x1BC
     virtual void Unknown92(); // 0x1C0
     virtual void CompileAndRunScript(IUIPanel*, const char*, const char*, int, int, bool); // 0x1C4
-    virtual void Unknown93(); // 0x1C8
+    virtual void ExposeObjectTypeToJavaScript(const char*, CUtlDelegate&); // 0x1C8
     virtual void Unknown94(); // 0x1CC
-    virtual void Unknown95(); // 0x1D0
+    virtual void ExposeGlobalObjectToJavaScript(const char*, void*, const char*, bool); // 0x1D0
     virtual void Unknown96(); // 0x1D4
     virtual void Unknown97(); // 0x1D8
     virtual void Unknown98(); // 0x1DC
@@ -177,10 +177,10 @@ class CUIEngine // or panorama::CUIEngineSource2. Its VTable
     virtual void Unknown126(); // 0x284
     virtual void Unknown127(); // 0x288
     virtual void Unknown128(); // 0x28C
-    virtual void Unknown129(); // 0x290
-    virtual void Unknown130(); // 0x294
-    virtual void Unknown131(); // 0x298
-    virtual void Unknown132(); // 0x29C
+    virtual void StartRegisterJSScope(const char*, const char*); // 0x290
+    virtual void EndRegisterJSScope(); // 0x294
+    virtual void RegisterNewJSFunction(); // 0x298
+    virtual void RegisterParamsJSFunction(); // 0x29C
     virtual void Unknown133(); // 0x2A0
     virtual void Unknown134(); // 0x2A4
     virtual void Unknown135(); // 0x2A8
@@ -192,6 +192,8 @@ class CUIEngine // or panorama::CUIEngineSource2. Its VTable
     virtual void Unknown141(); // 0x2C0
     virtual void PureVirtual11(); // 0x2C4
     virtual void PureVirtual12(); // 0x2C8
-
-
+    virtual void Unknown142(); // 0x2CC
+    virtual void Unknown143(); // 0x2D0
+    virtual void Unknown144(); // 0x2D4
+    virtual void Unknown145(); // 0x2D8
 }
